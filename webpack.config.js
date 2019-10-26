@@ -6,17 +6,17 @@ module.exports = {
         'app': './src/main.ts'
       },
    output:{
-       path: path.resolve(__dirname, './public'),     // путь к каталогу выходных файлов - папка public
+       path: path.resolve(__dirname, './public'),     // РїСѓС‚СЊ Рє РєР°С‚Р°Р»РѕРіСѓ РІС‹С…РѕРґРЅС‹С… С„Р°Р№Р»РѕРІ - РїР°РїРєР° public
        publicPath: '/public/',
-       filename: "[name].js"       // название создаваемого файла
+       filename: "[name].js"       // РЅР°Р·РІР°РЅРёРµ СЃРѕР·РґР°РІР°РµРјРѕРіРѕ С„Р°Р№Р»Р°
    },
    resolve: {
     extensions: ['.ts', '.js']
   },
    module:{
-       rules:[   //загрузчик для ts
+       rules:[   //Р·Р°РіСЂСѓР·С‡РёРє РґР»СЏ ts
            {
-               test: /\.ts$/, // определяем тип файлов
+               test: /\.ts$/, // РѕРїСЂРµРґРµР»СЏРµРј С‚РёРї С„Р°Р№Р»РѕРІ
                use: [
                 {
                     loader: 'awesome-typescript-loader',
@@ -30,8 +30,8 @@ module.exports = {
    plugins: [
     new webpack.ContextReplacementPlugin(
         /angular(\\|\/)core/,
-        path.resolve(__dirname, 'src'), // каталог с исходными файлами
-      {} // карта маршрутов
+        path.resolve(__dirname, 'src'), // РєР°С‚Р°Р»РѕРі СЃ РёСЃС…РѕРґРЅС‹РјРё С„Р°Р№Р»Р°РјРё
+      {} // РєР°СЂС‚Р° РјР°СЂС€СЂСѓС‚РѕРІ
     )
   ]
 }
